@@ -17,19 +17,10 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.rmkwz.CounterHit
-        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: CounterHit/Info.plist
         CODE_SIGN_STYLE: Automatic
-        INFOPLIST_KEY_CFBundleDisplayName: Counter Hit
-        INFOPLIST_KEY_CFBundleURLTypes:
-          - CFBundleURLName: com.rmkwz.CounterHit.addHit
-            CFBundleURLSchemes:
-              - counterhit
-        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
-        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
-        INFOPLIST_KEY_UILaunchScreen_Generation: YES
         TARGETED_DEVICE_FAMILY: 1
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-        CODE_SIGN_ENTITLEMENTS: CounterHit/CounterHit.entitlements
     dependencies:
       - target: CounterHitWidget
   CounterHitWidget:
@@ -41,11 +32,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.rmkwz.CounterHit.CounterHitWidget
-        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: CounterHitWidget/Info.plist
         CODE_SIGN_STYLE: Automatic
-        INFOPLIST_KEY_CFBundleDisplayName: Counter Hit Widget
-        INFOPLIST_KEY_NSExtension:
-          NSExtensionPointIdentifier: com.apple.widgetkit-extension
         SKIP_INSTALL: YES
         ASSETCATALOG_COMPILER_APPICON_NAME: ""
-        CODE_SIGN_ENTITLEMENTS: CounterHitWidget/CounterHitWidget.entitlements
