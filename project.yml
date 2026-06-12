@@ -1,0 +1,51 @@
+name: CounterHit
+options:
+  bundleIdPrefix: com.rmkwz
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    MARKETING_VERSION: 1.0
+    CURRENT_PROJECT_VERSION: 1
+    SWIFT_VERSION: 5.9
+targets:
+  CounterHit:
+    type: application
+    platform: iOS
+    sources:
+      - CounterHit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rmkwz.CounterHit
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
+        INFOPLIST_KEY_CFBundleDisplayName: Counter Hit
+        INFOPLIST_KEY_CFBundleURLTypes:
+          - CFBundleURLName: com.rmkwz.CounterHit.addHit
+            CFBundleURLSchemes:
+              - counterhit
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        TARGETED_DEVICE_FAMILY: 1
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_ENTITLEMENTS: CounterHit/CounterHit.entitlements
+    dependencies:
+      - target: CounterHitWidget
+  CounterHitWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - CounterHitWidget
+      - CounterHit/Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.rmkwz.CounterHit.CounterHitWidget
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
+        INFOPLIST_KEY_CFBundleDisplayName: Counter Hit Widget
+        INFOPLIST_KEY_NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        SKIP_INSTALL: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+        CODE_SIGN_ENTITLEMENTS: CounterHitWidget/CounterHitWidget.entitlements

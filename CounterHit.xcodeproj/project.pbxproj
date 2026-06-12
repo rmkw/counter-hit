@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0540649DFA0F6C2B09CF4266 /* HitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7DDD2342627C5B3C3A0F3 /* HitStore.swift */; };
+		06F97110C9912733531E0D02 /* HitAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920DA58237D357D5626FDD6 /* HitAnalytics.swift */; };
+		1819240E1D7AAD26743CBC76 /* CounterHitWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ECBA1FBF3006B054E603DB /* CounterHitWidgetBundle.swift */; };
+		195C1F83BCBDB2C85CAF22AB /* HitPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447F628EB6CB99996A85EA6 /* HitPeriod.swift */; };
+		263062575C3167775F7145D8 /* HitRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED8E8380DFD7B9FCC70566 /* HitRecord.swift */; };
+		3B6C17E5F972E93D737B1D78 /* CounterHitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29710F1E6C53A21A2C6534B0 /* CounterHitApp.swift */; };
+		4702DCF2EDC91BB870E297D7 /* HitBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4AB9C2606D28DD7628233 /* HitBucket.swift */; };
+		53877313E5C05CC352BAD20E /* HitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7DDD2342627C5B3C3A0F3 /* HitStore.swift */; };
+		665BD3C4377A23819223A616 /* CounterHitWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 40154D1F374293CB738EC353 /* CounterHitWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7787EB59F5E86DFCD8414F09 /* CounterHitPeriodWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DD8A1E25D6A14CF8FCE8CF /* CounterHitPeriodWidget.swift */; };
+		81BFD252B851B3790F814FAA /* HitAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920DA58237D357D5626FDD6 /* HitAnalytics.swift */; };
+		907A12C329317B1CFC7F9565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD57F3231654943CC694E06B /* Assets.xcassets */; };
+		90A8C979B9ECA6623CE9B424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA532E3BEAD498C290B491B6 /* ContentView.swift */; };
+		AF59DD03976A1CF379F8E31F /* HitChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C3017E4A58CCB39B9F2B81 /* HitChartView.swift */; };
+		BB21CA775DA57FDA157EFFB0 /* HitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B173C5D275D9D6B2AD982 /* HitModel.swift */; };
+		BF75424F59EBD87E9EB7FB8E /* HitPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447F628EB6CB99996A85EA6 /* HitPeriod.swift */; };
+		E1C8EA2CDEADC178B34A88C2 /* HitRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED8E8380DFD7B9FCC70566 /* HitRecord.swift */; };
+		F32DB12A64B3A77F6C6C7B16 /* HitBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4AB9C2606D28DD7628233 /* HitBucket.swift */; };
+		F76CA6D458DA6335996F1C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6423FAFBC81B82B15942E2D0 /* Assets.xcassets */; };
+		FA64ABA5D3F6FC968858DCAF /* CounterHitWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F1D7916A97800D9C83223F /* CounterHitWidgetView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0841CD90835AA6B9DE24B9AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE43D915BF84ED8A50E2DC40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE52BEC255C36F00179B5B61;
+			remoteInfo = CounterHitWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		263912ECF01989823A8B3CA5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				665BD3C4377A23819223A616 /* CounterHitWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14A7DDD2342627C5B3C3A0F3 /* HitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitStore.swift; sourceTree = "<group>"; };
+		29710F1E6C53A21A2C6534B0 /* CounterHitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHitApp.swift; sourceTree = "<group>"; };
+		312B173C5D275D9D6B2AD982 /* HitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitModel.swift; sourceTree = "<group>"; };
+		3920DA58237D357D5626FDD6 /* HitAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitAnalytics.swift; sourceTree = "<group>"; };
+		40154D1F374293CB738EC353 /* CounterHitWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = CounterHitWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2AAC32D81440BC7EFEBBE1 /* CounterHit.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CounterHit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DD8A1E25D6A14CF8FCE8CF /* CounterHitPeriodWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHitPeriodWidget.swift; sourceTree = "<group>"; };
+		5AD4AB9C2606D28DD7628233 /* HitBucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitBucket.swift; sourceTree = "<group>"; };
+		6423FAFBC81B82B15942E2D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69C3017E4A58CCB39B9F2B81 /* HitChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitChartView.swift; sourceTree = "<group>"; };
+		74ECBA1FBF3006B054E603DB /* CounterHitWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHitWidgetBundle.swift; sourceTree = "<group>"; };
+		78D1AA1B16C7BDA117C9D113 /* CounterHit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterHit.entitlements; sourceTree = "<group>"; };
+		7AED8E8380DFD7B9FCC70566 /* HitRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitRecord.swift; sourceTree = "<group>"; };
+		8447F628EB6CB99996A85EA6 /* HitPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitPeriod.swift; sourceTree = "<group>"; };
+		AA532E3BEAD498C290B491B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B5F1D7916A97800D9C83223F /* CounterHitWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHitWidgetView.swift; sourceTree = "<group>"; };
+		E0B00A178BBBCE87A30C027D /* CounterHitWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterHitWidget.entitlements; sourceTree = "<group>"; };
+		FD57F3231654943CC694E06B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1DE51B2DBB03641FF1478ACC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3920DA58237D357D5626FDD6 /* HitAnalytics.swift */,
+				5AD4AB9C2606D28DD7628233 /* HitBucket.swift */,
+				8447F628EB6CB99996A85EA6 /* HitPeriod.swift */,
+				7AED8E8380DFD7B9FCC70566 /* HitRecord.swift */,
+				14A7DDD2342627C5B3C3A0F3 /* HitStore.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		30B18700ECBF83E82BF3DD95 /* CounterHitWidget */ = {
+			isa = PBXGroup;
+			children = (
+				6423FAFBC81B82B15942E2D0 /* Assets.xcassets */,
+				57DD8A1E25D6A14CF8FCE8CF /* CounterHitPeriodWidget.swift */,
+				E0B00A178BBBCE87A30C027D /* CounterHitWidget.entitlements */,
+				74ECBA1FBF3006B054E603DB /* CounterHitWidgetBundle.swift */,
+				B5F1D7916A97800D9C83223F /* CounterHitWidgetView.swift */,
+			);
+			path = CounterHitWidget;
+			sourceTree = "<group>";
+		};
+		B5D00C020C72287FEDDB86A9 = {
+			isa = PBXGroup;
+			children = (
+				E13378E931AC08173BD6EC6E /* CounterHit */,
+				30B18700ECBF83E82BF3DD95 /* CounterHitWidget */,
+				DAE8BD80DAD2C166A5A48B48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3319346A957488BF58D248D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AA532E3BEAD498C290B491B6 /* ContentView.swift */,
+				29710F1E6C53A21A2C6534B0 /* CounterHitApp.swift */,
+				69C3017E4A58CCB39B9F2B81 /* HitChartView.swift */,
+				312B173C5D275D9D6B2AD982 /* HitModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DAE8BD80DAD2C166A5A48B48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E2AAC32D81440BC7EFEBBE1 /* CounterHit.app */,
+				40154D1F374293CB738EC353 /* CounterHitWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E13378E931AC08173BD6EC6E /* CounterHit */ = {
+			isa = PBXGroup;
+			children = (
+				FD57F3231654943CC694E06B /* Assets.xcassets */,
+				78D1AA1B16C7BDA117C9D113 /* CounterHit.entitlements */,
+				C3319346A957488BF58D248D /* App */,
+				1DE51B2DBB03641FF1478ACC /* Shared */,
+			);
+			path = CounterHit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E067300A491E4E19B8FBCFF /* CounterHit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B392444566F1AB44A1282542 /* Build configuration list for PBXNativeTarget "CounterHit" */;
+			buildPhases = (
+				7ED82702961765F9174B6AD4 /* Sources */,
+				3A978CE1D3BAB45E01026CBF /* Resources */,
+				263912ECF01989823A8B3CA5 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				160DE833284FC2205D19D9E8 /* PBXTargetDependency */,
+			);
+			name = CounterHit;
+			packageProductDependencies = (
+			);
+			productName = CounterHit;
+			productReference = 4E2AAC32D81440BC7EFEBBE1 /* CounterHit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE52BEC255C36F00179B5B61 /* CounterHitWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB7B6B53BE43FEEE09BC79BF /* Build configuration list for PBXNativeTarget "CounterHitWidget" */;
+			buildPhases = (
+				8D46AE2FCE7E94519B62D481 /* Sources */,
+				C470F66932DBF2E1608A8DEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CounterHitWidget;
+			packageProductDependencies = (
+			);
+			productName = CounterHitWidget;
+			productReference = 40154D1F374293CB738EC353 /* CounterHitWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE43D915BF84ED8A50E2DC40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0E067300A491E4E19B8FBCFF = {
+						ProvisioningStyle = Automatic;
+					};
+					BE52BEC255C36F00179B5B61 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 440D7376786D50DC33601876 /* Build configuration list for PBXProject "CounterHit" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B5D00C020C72287FEDDB86A9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DAE8BD80DAD2C166A5A48B48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E067300A491E4E19B8FBCFF /* CounterHit */,
+				BE52BEC255C36F00179B5B61 /* CounterHitWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A978CE1D3BAB45E01026CBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907A12C329317B1CFC7F9565 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C470F66932DBF2E1608A8DEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76CA6D458DA6335996F1C9B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7ED82702961765F9174B6AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90A8C979B9ECA6623CE9B424 /* ContentView.swift in Sources */,
+				3B6C17E5F972E93D737B1D78 /* CounterHitApp.swift in Sources */,
+				81BFD252B851B3790F814FAA /* HitAnalytics.swift in Sources */,
+				4702DCF2EDC91BB870E297D7 /* HitBucket.swift in Sources */,
+				AF59DD03976A1CF379F8E31F /* HitChartView.swift in Sources */,
+				BB21CA775DA57FDA157EFFB0 /* HitModel.swift in Sources */,
+				195C1F83BCBDB2C85CAF22AB /* HitPeriod.swift in Sources */,
+				E1C8EA2CDEADC178B34A88C2 /* HitRecord.swift in Sources */,
+				53877313E5C05CC352BAD20E /* HitStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D46AE2FCE7E94519B62D481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7787EB59F5E86DFCD8414F09 /* CounterHitPeriodWidget.swift in Sources */,
+				1819240E1D7AAD26743CBC76 /* CounterHitWidgetBundle.swift in Sources */,
+				FA64ABA5D3F6FC968858DCAF /* CounterHitWidgetView.swift in Sources */,
+				06F97110C9912733531E0D02 /* HitAnalytics.swift in Sources */,
+				F32DB12A64B3A77F6C6C7B16 /* HitBucket.swift in Sources */,
+				BF75424F59EBD87E9EB7FB8E /* HitPeriod.swift in Sources */,
+				263062575C3167775F7145D8 /* HitRecord.swift in Sources */,
+				0540649DFA0F6C2B09CF4266 /* HitStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		160DE833284FC2205D19D9E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE52BEC255C36F00179B5B61 /* CounterHitWidget */;
+			targetProxy = 0841CD90835AA6B9DE24B9AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24FCE52C125B3AB379F49132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = CounterHitWidget/CounterHitWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Counter Hit Widget";
+				INFOPLIST_KEY_NSExtension = "[\"NSExtensionPointIdentifier\": \"com.apple.widgetkit-extension\"]";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rmkwz.CounterHit.CounterHitWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		586A38884E2E09022B6A1BDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = CounterHitWidget/CounterHitWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Counter Hit Widget";
+				INFOPLIST_KEY_NSExtension = "[\"NSExtensionPointIdentifier\": \"com.apple.widgetkit-extension\"]";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rmkwz.CounterHit.CounterHitWidget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		766117BBD8CF51EE4935FC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CounterHit/CounterHit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Counter Hit";
+				INFOPLIST_KEY_CFBundleURLTypes = "[[\"CFBundleURLName\": \"com.rmkwz.CounterHit.addHit\", \"CFBundleURLSchemes\": [\"counterhit\"]]]";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rmkwz.CounterHit;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B171AE6136789CF612C6CEAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		B9B43D24BD2902257A5E1B8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		CF51D26D877CF5683D9E18E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CounterHit/CounterHit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Counter Hit";
+				INFOPLIST_KEY_CFBundleURLTypes = "[[\"CFBundleURLName\": \"com.rmkwz.CounterHit.addHit\", \"CFBundleURLSchemes\": [\"counterhit\"]]]";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rmkwz.CounterHit;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		440D7376786D50DC33601876 /* Build configuration list for PBXProject "CounterHit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B43D24BD2902257A5E1B8E /* Debug */,
+				B171AE6136789CF612C6CEAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B392444566F1AB44A1282542 /* Build configuration list for PBXNativeTarget "CounterHit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF51D26D877CF5683D9E18E3 /* Debug */,
+				766117BBD8CF51EE4935FC1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DB7B6B53BE43FEEE09BC79BF /* Build configuration list for PBXNativeTarget "CounterHitWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24FCE52C125B3AB379F49132 /* Debug */,
+				586A38884E2E09022B6A1BDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE43D915BF84ED8A50E2DC40 /* Project object */;
+}
