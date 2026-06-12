@@ -48,16 +48,4 @@ No available simulator runtimes for platform iphonesimulator
 
 En Xcode local con runtimes instalados, ese error no deberia aparecer.
 
-## Practica de PR con Codex
-
-Cuando quieras practicar que tu perfil y Codex aparezcan como contribuidores:
-
-1. Usa esta carpeta como raiz del repo: `/Users/rmkwz/Documents/counter hit`.
-2. Crea el primer commit base en `master` o `main`.
-3. Pideme crear una rama `codex/...` con un cambio pequeno.
-4. Yo hago commit en esa rama.
-5. Se sube la rama a GitHub y se abre un PR.
-6. Tu aceptas/mergeas el PR desde GitHub.
-
-Ese flujo hace visible que tu repo recibio cambios por PR, y el autor del commit dependera de la configuracion de Git usada al hacer el commit.
 # counter-hit
