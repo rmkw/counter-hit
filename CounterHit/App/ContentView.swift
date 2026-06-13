@@ -4,100 +4,71 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject private var hitModel: HitModel
     @Binding var showAddHitConfirmation: Bool
-    @State private var selectedPeriod: HitPeriod = .week
+    @State private var selectedPeriod: HitPeriod = HitPreferences.selectedPeriod
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    header
-                    totalsGrid
-                    periodPicker
-                    HitChartView(period: selectedPeriod, buckets: hitModel.buckets(for: selectedPeriod))
+        ZStack {
+            Color(.systemBackground)
+                .ignoresSafeArea()
+
+            compactCard
+                .padding(18)
+        }
+        .onAppear {
+            hitModel.refresh()
+        }
+        .onChange(of: selectedPeriod) { _, newValue in
+            HitPreferences.selectedPeriod = newValue
+        }
+    }
+
+    private var compactCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(selectedPeriod.title)
+                        .font(.title2.weight(.bold))
+                        .foregroundStyle(.white)
+
+                    Text("Hoy \(hitModel.todayTotal)")
+                        .font(.subheadline)
+                        .foregroundStyle(.white.opacity(0.56))
+                        .monospacedDigit()
                 }
-                .padding(20)
+
+                Spacer()
+
+                Button {
+                    showAddHitConfirmation = true
+                } label: {
+                    Image(systemName: "plus.circle.fill")
+                        .font(.title)
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(.green)
+                }
+                .accessibilityLabel("Agregar hit")
             }
-            .background(Color(.systemGroupedBackground))
-            .navigationTitle("Counter Hit")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showAddHitConfirmation = true
-                    } label: {
-                        Image(systemName: "plus")
-                    }
-                    .accessibilityLabel("Agregar hit")
+
+            Picker("Rango", selection: $selectedPeriod) {
+                ForEach(HitPeriod.allCases) { period in
+                    Text(period.title).tag(period)
                 }
             }
-            .onAppear {
-                hitModel.refresh()
-            }
+            .pickerStyle(.segmented)
+
+            HitCompactChart(period: selectedPeriod, buckets: hitModel.buckets(for: selectedPeriod))
+                .frame(height: 172)
         }
-    }
-
-    private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Hits de hoy")
-                .font(.headline)
-                .foregroundStyle(.secondary)
-
-            HStack(alignment: .firstTextBaseline, spacing: 10) {
-                Text("\(hitModel.todayTotal)")
-                    .font(.system(size: 56, weight: .bold, design: .rounded))
-                    .monospacedDigit()
-
-                Text("hits")
-                    .font(.title3.weight(.semibold))
-                    .foregroundStyle(.secondary)
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(20)
-        .background(.background, in: RoundedRectangle(cornerRadius: 8))
-    }
-
-    private var totalsGrid: some View {
-        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-            TotalTile(title: "Dia", value: hitModel.todayTotal, symbol: "sun.max")
-            TotalTile(title: "Semana", value: hitModel.weekTotal, symbol: "calendar")
-            TotalTile(title: "Mes", value: hitModel.monthTotal, symbol: "chart.bar")
-            TotalTile(title: "Ano", value: hitModel.yearTotal, symbol: "calendar.badge.clock")
-        }
-    }
-
-    private var periodPicker: some View {
-        Picker("Rango", selection: $selectedPeriod) {
-            ForEach(HitPeriod.allCases) { period in
-                Text(period.title).tag(period)
-            }
-        }
-        .pickerStyle(.segmented)
-    }
-}
-
-private struct TotalTile: View {
-    let title: String
-    let value: Int
-    let symbol: String
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Image(systemName: symbol)
-                .font(.headline)
-                .foregroundStyle(.tint)
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(title)
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
-
-                Text("\(value)")
-                    .font(.title.bold())
-                    .monospacedDigit()
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(16)
-        .background(.background, in: RoundedRectangle(cornerRadius: 8))
+        .padding(.horizontal, 24)
+        .padding(.vertical, 22)
+        .background(
+            LinearGradient(
+                colors: [Color(red: 0.12, green: 0.12, blue: 0.13), Color(red: 0.05, green: 0.05, blue: 0.06)],
+                startPoint: .top,
+                endPoint: .bottom
+            ),
+            in: RoundedRectangle(cornerRadius: 26, style: .continuous)
+        )
+        .shadow(color: .black.opacity(0.24), radius: 22, y: 10)
     }
 }

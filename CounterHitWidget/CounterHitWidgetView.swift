@@ -3,8 +3,6 @@ import SwiftUI
 import WidgetKit
 
 struct CounterHitWidgetView: View {
-    @Environment(\.widgetFamily) private var family
-
     let entry: CounterHitEntry
 
     private var maxCount: Int {
@@ -12,34 +10,64 @@ struct CounterHitWidgetView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 7) {
             header
+            periodTabs
             chart
         }
         .containerBackground(for: .widget) {
-            Color(.systemBackground)
+            LinearGradient(
+                colors: [Color(red: 0.13, green: 0.13, blue: 0.14), Color(red: 0.06, green: 0.06, blue: 0.07)],
+                startPoint: .top,
+                endPoint: .bottom
+            )
         }
-        .widgetURL(URL(string: "counterhit://add-hit"))
     }
 
     private var header: some View {
-        HStack(alignment: .firstTextBaseline) {
-            VStack(alignment: .leading, spacing: 2) {
+        HStack(alignment: .top) {
+            VStack(alignment: .leading, spacing: 1) {
                 Text(entry.period.title)
-                    .font(.headline)
+                    .font(.system(size: 19, weight: .bold))
+                    .foregroundStyle(.white)
 
                 Text("Hoy \(entry.todayTotal)")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .font(.system(size: 13, weight: .medium))
+                    .foregroundStyle(.white.opacity(0.54))
                     .monospacedDigit()
             }
 
-            Spacer(minLength: 6)
+            Spacer(minLength: 8)
 
-            Image(systemName: "plus.circle.fill")
-                .foregroundStyle(.green)
-                .font(.title3)
+            Link(destination: URL(string: "counterhit://add-hit")!) {
+                Image(systemName: "plus.circle.fill")
+                    .font(.system(size: 27, weight: .bold))
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundStyle(.green)
+            }
+            .accessibilityLabel("Agregar hit")
         }
+    }
+
+    private var periodTabs: some View {
+        HStack(spacing: 6) {
+            tabButton(.week)
+            tabButton(.month)
+            tabButton(.year)
+        }
+    }
+
+    private func tabButton(_ period: HitPeriod) -> some View {
+        Button(intent: SelectHitPeriodIntent(period: option(for: period))) {
+            Text(period.shortTitle)
+                .font(.system(size: 11, weight: .bold))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 4)
+                .foregroundStyle(entry.period == period ? .black : .white.opacity(0.62))
+                .background(entry.period == period ? Color.green : Color.white.opacity(0.08))
+                .clipShape(Capsule())
+        }
+        .buttonStyle(.plain)
     }
 
     private var chart: some View {
@@ -48,41 +76,42 @@ struct CounterHitWidgetView: View {
                 x: .value(entry.period.xAxisTitle, bucket.label),
                 y: .value("Hits", bucket.count)
             )
-            .foregroundStyle(.green.gradient)
+            .foregroundStyle(.clear)
             .annotation(position: .top) {
-                if family != .systemSmall {
-                    Text("\(bucket.count)")
-                        .font(.caption2)
-                        .foregroundStyle(.secondary)
-                        .monospacedDigit()
-                }
+                Text("\(bucket.count)")
+                    .font(.system(size: 11, weight: .semibold))
+                    .foregroundStyle(.white.opacity(0.52))
+                    .monospacedDigit()
             }
         }
-        .chartYScale(domain: 0...(maxCount + 1))
+        .chartYScale(domain: 0...(maxCount + 2))
         .chartXAxis {
             AxisMarks { value in
                 AxisValueLabel {
                     if let label = value.as(String.self) {
-                        Text(shortLabel(label))
-                            .font(.caption2)
+                        Text(label)
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundStyle(.white.opacity(0.52))
                     }
                 }
             }
         }
         .chartYAxis {
-            AxisMarks(position: .leading, values: .automatic(desiredCount: family == .systemSmall ? 2 : 4)) {
+            AxisMarks(position: .leading, values: .automatic(desiredCount: 3)) {
                 AxisGridLine()
+                    .foregroundStyle(.white.opacity(0.14))
                 AxisValueLabel()
-                    .font(.caption2)
+                    .font(.system(size: 10))
+                    .foregroundStyle(.white.opacity(0.52))
             }
         }
     }
 
-    private func shortLabel(_ label: String) -> String {
-        guard family == .systemSmall, label.count > 3 else {
-            return label
+    private func option(for period: HitPeriod) -> HitPeriodOption {
+        switch period {
+        case .week: .week
+        case .month: .month
+        case .year: .year
         }
-
-        return String(label.prefix(3))
     }
 }
