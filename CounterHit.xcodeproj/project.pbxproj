@@ -63,9 +63,9 @@
 		29710F1E6C53A21A2C6534B0 /* CounterHitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHitApp.swift; sourceTree = "<group>"; };
 		312B173C5D275D9D6B2AD982 /* HitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitModel.swift; sourceTree = "<group>"; };
 		3920DA58237D357D5626FDD6 /* HitAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitAnalytics.swift; sourceTree = "<group>"; };
-		40154D1F374293CB738EC353 /* CounterHitWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = CounterHitWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		40154D1F374293CB738EC353 /* CounterHitWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CounterHitWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		46753020FEB0A1272C267206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4E2AAC32D81440BC7EFEBBE1 /* CounterHit.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CounterHit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2AAC32D81440BC7EFEBBE1 /* CounterHit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterHit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD4AB9C2606D28DD7628233 /* HitBucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitBucket.swift; sourceTree = "<group>"; };
 		6423FAFBC81B82B15942E2D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69C3017E4A58CCB39B9F2B81 /* HitChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitChartView.swift; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2650;
 				TargetAttributes = {
 					0E067300A491E4E19B8FBCFF = {
 						DevelopmentTeam = RMM5DYSN43;
@@ -394,6 +394,7 @@
 				DEVELOPMENT_TEAM = RMM5DYSN43;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -408,6 +409,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
@@ -453,6 +455,7 @@
 				DEVELOPMENT_TEAM = RMM5DYSN43;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -474,6 +477,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;

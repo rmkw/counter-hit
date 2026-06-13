@@ -64,6 +64,6 @@ struct CounterHitWidget: Widget {
         }
         .configurationDisplayName("Counter Hit")
         .description("Grafica compacta de hits con rango semanal, mensual o anual.")
-        .supportedFamilies([.systemMedium])
+        .supportedFamilies([.systemLarge])
     }
 }

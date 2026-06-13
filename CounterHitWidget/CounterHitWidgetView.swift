@@ -25,26 +25,39 @@ struct CounterHitWidgetView: View {
     }
 
     private var header: some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: 1) {
+        HStack(alignment: .center, spacing: 14) {
+            Button(intent: RemoveHitIntent()) {
+                Image(systemName: "minus.circle.fill")
+                    .font(.system(size: 30, weight: .bold))
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundStyle(.white.opacity(0.5))
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Restar hit")
+
+            Spacer(minLength: 0)
+
+            VStack(alignment: .center, spacing: 1) {
                 Text(entry.period.title)
-                    .font(.system(size: 19, weight: .bold))
+                    .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(.white)
 
                 Text("Hoy \(entry.todayTotal)")
-                    .font(.system(size: 13, weight: .medium))
+                    .font(.system(size: 15, weight: .medium))
                     .foregroundStyle(.white.opacity(0.54))
                     .monospacedDigit()
             }
+            .frame(maxWidth: .infinity)
 
-            Spacer(minLength: 8)
+            Spacer(minLength: 0)
 
-            Link(destination: URL(string: "counterhit://add-hit")!) {
+            Button(intent: AddHitIntent()) {
                 Image(systemName: "plus.circle.fill")
-                    .font(.system(size: 27, weight: .bold))
+                    .font(.system(size: 32, weight: .bold))
                     .symbolRenderingMode(.hierarchical)
                     .foregroundStyle(.green)
             }
+            .buttonStyle(.plain)
             .accessibilityLabel("Agregar hit")
         }
     }
@@ -76,10 +89,11 @@ struct CounterHitWidgetView: View {
                 x: .value(entry.period.xAxisTitle, bucket.label),
                 y: .value("Hits", bucket.count)
             )
-            .foregroundStyle(.clear)
+            .foregroundStyle(Color.green.gradient)
+            .cornerRadius(4)
             .annotation(position: .top) {
                 Text("\(bucket.count)")
-                    .font(.system(size: 11, weight: .semibold))
+                    .font(.system(size: 12, weight: .semibold))
                     .foregroundStyle(.white.opacity(0.52))
                     .monospacedDigit()
             }
@@ -90,7 +104,7 @@ struct CounterHitWidgetView: View {
                 AxisValueLabel {
                     if let label = value.as(String.self) {
                         Text(label)
-                            .font(.system(size: 11, weight: .semibold))
+                            .font(.system(size: 12, weight: .semibold))
                             .foregroundStyle(.white.opacity(0.52))
                     }
                 }

@@ -42,3 +42,25 @@ struct SelectHitPeriodIntent: AppIntent {
         return .result()
     }
 }
+
+struct AddHitIntent: AppIntent {
+    static var title: LocalizedStringResource = "Agregar hit"
+    static var description = IntentDescription("Suma un hit al dia actual desde el widget.")
+
+    func perform() async throws -> some IntentResult {
+        HitStore.shared.addHit()
+        WidgetCenter.shared.reloadAllTimelines()
+        return .result()
+    }
+}
+
+struct RemoveHitIntent: AppIntent {
+    static var title: LocalizedStringResource = "Restar hit"
+    static var description = IntentDescription("Resta un hit del dia actual desde el widget.")
+
+    func perform() async throws -> some IntentResult {
+        HitStore.shared.removeHitToday()
+        WidgetCenter.shared.reloadAllTimelines()
+        return .result()
+    }
+}
