@@ -22,4 +22,12 @@ enum HitPeriod: String, CaseIterable, Identifiable {
         case .year: "Meses"
         }
     }
+
+    var shortTitle: String {
+        switch self {
+        case .week: "Sem"
+        case .month: "Mes"
+        case .year: "Ano"
+        }
+    }
 }

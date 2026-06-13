@@ -47,5 +47,4 @@ No available simulator runtimes for platform iphonesimulator
 ```
 
 En Xcode local con runtimes instalados, ese error no deberia aparecer.
-
 # counter-hit
