@@ -39,13 +39,25 @@ struct CounterHitWidgetView: View {
 
             Spacer(minLength: 8)
 
-            Link(destination: URL(string: "counterhit://add-hit")!) {
-                Image(systemName: "plus.circle.fill")
-                    .font(.system(size: 27, weight: .bold))
-                    .symbolRenderingMode(.hierarchical)
-                    .foregroundStyle(.green)
+            HStack(spacing: 7) {
+                Button(intent: RemoveHitIntent()) {
+                    Image(systemName: "minus.circle.fill")
+                        .font(.system(size: 24, weight: .bold))
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(.white.opacity(0.5))
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Restar hit")
+
+                Button(intent: AddHitIntent()) {
+                    Image(systemName: "plus.circle.fill")
+                        .font(.system(size: 27, weight: .bold))
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(.green)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Agregar hit")
             }
-            .accessibilityLabel("Agregar hit")
         }
     }
 
@@ -76,7 +88,8 @@ struct CounterHitWidgetView: View {
                 x: .value(entry.period.xAxisTitle, bucket.label),
                 y: .value("Hits", bucket.count)
             )
-            .foregroundStyle(.clear)
+            .foregroundStyle(Color.green.gradient)
+            .cornerRadius(4)
             .annotation(position: .top) {
                 Text("\(bucket.count)")
                     .font(.system(size: 11, weight: .semibold))

@@ -38,15 +38,27 @@ struct ContentView: View {
 
                 Spacer()
 
-                Button {
-                    showAddHitConfirmation = true
-                } label: {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.title)
-                        .symbolRenderingMode(.hierarchical)
-                        .foregroundStyle(.green)
+                HStack(spacing: 10) {
+                    Button {
+                        hitModel.removeHitToday()
+                    } label: {
+                        Image(systemName: "minus.circle.fill")
+                            .font(.title2)
+                            .symbolRenderingMode(.hierarchical)
+                            .foregroundStyle(.white.opacity(0.5))
+                    }
+                    .accessibilityLabel("Restar hit")
+
+                    Button {
+                        showAddHitConfirmation = true
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title)
+                            .symbolRenderingMode(.hierarchical)
+                            .foregroundStyle(.green)
+                    }
+                    .accessibilityLabel("Agregar hit")
                 }
-                .accessibilityLabel("Agregar hit")
             }
 
             Picker("Rango", selection: $selectedPeriod) {

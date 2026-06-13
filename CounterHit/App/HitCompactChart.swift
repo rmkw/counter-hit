@@ -15,7 +15,8 @@ struct HitCompactChart: View {
                 x: .value(period.xAxisTitle, bucket.label),
                 y: .value("Hits", bucket.count)
             )
-            .foregroundStyle(.clear)
+            .foregroundStyle(Color.green.gradient)
+            .cornerRadius(4)
             .annotation(position: .top) {
                 Text("\(bucket.count)")
                     .font(.caption.weight(.semibold))

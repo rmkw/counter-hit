@@ -35,6 +35,11 @@ final class HitModel: ObservableObject {
         records = store.records()
     }
 
+    func removeHitToday() {
+        store.removeHitToday()
+        records = store.records()
+    }
+
     func refresh() {
         records = store.records()
     }

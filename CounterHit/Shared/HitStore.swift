@@ -31,6 +31,17 @@ final class HitStore {
         WidgetCenter.shared.reloadAllTimelines()
     }
 
+    func removeHitToday(calendar: Calendar = .current, now: Date = Date()) {
+        var allRecords = records()
+        guard let index = allRecords.lastIndex(where: { calendar.isDate($0.date, inSameDayAs: now) }) else {
+            return
+        }
+
+        allRecords.remove(at: index)
+        save(allRecords)
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+
     func removeAll() {
         save([])
         WidgetCenter.shared.reloadAllTimelines()
