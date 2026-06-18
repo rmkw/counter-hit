@@ -23,7 +23,6 @@
 		907A12C329317B1CFC7F9565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD57F3231654943CC694E06B /* Assets.xcassets */; };
 		90A8C979B9ECA6623CE9B424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA532E3BEAD498C290B491B6 /* ContentView.swift */; };
 		AF500DF39A3EC88AEC4C36D1 /* CounterHitWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37AECE2E2EA864EC49155F3 /* CounterHitWidget.swift */; };
-		AF59DD03976A1CF379F8E31F /* HitChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C3017E4A58CCB39B9F2B81 /* HitChartView.swift */; };
 		BB21CA775DA57FDA157EFFB0 /* HitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B173C5D275D9D6B2AD982 /* HitModel.swift */; };
 		BF75424F59EBD87E9EB7FB8E /* HitPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447F628EB6CB99996A85EA6 /* HitPeriod.swift */; };
 		CD554D3A2DE0F2A56ED9EC3E /* HitCompactChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0BD8E5AC7BCD97FB807D14 /* HitCompactChart.swift */; };
@@ -68,7 +67,6 @@
 		4E2AAC32D81440BC7EFEBBE1 /* CounterHit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterHit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD4AB9C2606D28DD7628233 /* HitBucket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitBucket.swift; sourceTree = "<group>"; };
 		6423FAFBC81B82B15942E2D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		69C3017E4A58CCB39B9F2B81 /* HitChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitChartView.swift; sourceTree = "<group>"; };
 		74ECBA1FBF3006B054E603DB /* CounterHitWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHitWidgetBundle.swift; sourceTree = "<group>"; };
 		78D1AA1B16C7BDA117C9D113 /* CounterHit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterHit.entitlements; sourceTree = "<group>"; };
 		7AED8E8380DFD7B9FCC70566 /* HitRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitRecord.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			children = (
 				AA532E3BEAD498C290B491B6 /* ContentView.swift */,
 				29710F1E6C53A21A2C6534B0 /* CounterHitApp.swift */,
-				69C3017E4A58CCB39B9F2B81 /* HitChartView.swift */,
 				AB0BD8E5AC7BCD97FB807D14 /* HitCompactChart.swift */,
 				312B173C5D275D9D6B2AD982 /* HitModel.swift */,
 			);
@@ -261,7 +258,6 @@
 				3B6C17E5F972E93D737B1D78 /* CounterHitApp.swift in Sources */,
 				81BFD252B851B3790F814FAA /* HitAnalytics.swift in Sources */,
 				4702DCF2EDC91BB870E297D7 /* HitBucket.swift in Sources */,
-				AF59DD03976A1CF379F8E31F /* HitChartView.swift in Sources */,
 				CD554D3A2DE0F2A56ED9EC3E /* HitCompactChart.swift in Sources */,
 				BB21CA775DA57FDA157EFFB0 /* HitModel.swift in Sources */,
 				195C1F83BCBDB2C85CAF22AB /* HitPeriod.swift in Sources */,

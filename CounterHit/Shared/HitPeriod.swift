@@ -27,7 +27,7 @@ enum HitPeriod: String, CaseIterable, Identifiable {
         switch self {
         case .week: "Sem"
         case .month: "Mes"
-        case .year: "Ano"
+        case .year: "Anual"
         }
     }
 }

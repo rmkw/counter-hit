@@ -1,50 +1,68 @@
 # Counter Hit
 
-App iOS SwiftUI para contar hits diarios y ver graficas semanal, mensual y anual con widgets.
+App iOS en SwiftUI para contar hits diarios y visualizar graficos de actividad por semana, mes o ano. Incluye widgets de WidgetKit para acceder rapido desde la pantalla de inicio.
 
-## Que incluye
+## Funcionalidades
 
-- App principal `CounterHit` con boton para agregar hit.
-- Modal de confirmacion: `Si, agregar hit` suma el hit del dia; `No, cancelar` no hace nada.
-- Dashboard con totales por dia, semana, mes y ano.
-- Graficas con Swift Charts:
-  - Semanal: abajo dias, arriba hits.
-  - Mensual: abajo semanas, arriba hits.
-  - Anual: abajo meses, arriba hits.
-- Tres widgets WidgetKit: semanal, mensual y anual.
-- Al tocar un widget se abre `counterhit://add-hit` y aparece el modal de confirmacion.
-- Datos compartidos entre app y widget con App Group.
+- **Contador diario** — suma o resta hits del dia actual con confirmacion.
+- **Graficos de actividad** — chart de barras con Swift Charts para los periodos semanal, mensual y anual.
+- **Widgets** — grafica compacta con botones para agregar/restar hits directamente desde la pantalla de inicio.
+- **Persistencia** — datos guardados en UserDefaults dentro de un App Group, compartidos entre la app y los widgets.
+- **Preferencias sincronizadas** — el periodo seleccionado se comparte entre app y widget.
+
+## Estructura del proyecto
+
+```
+CounterHit/
+  App/                  # App principal
+    ContentView         # Vista principal con card compacto
+    HitCompactChart     # Componente de grafica
+    HitModel            # ViewModel
+    CounterHitApp       # Entry point
+  Shared/               # Codigo compartido con el widget
+    HitStore            # Persistencia en UserDefaults
+    HitAnalytics        # Logica de calculos y buckets
+    HitRecord           # Modelo de un hit
+    HitBucket           # Modelo de un bucket para el chart
+    HitPeriod           # Enum: week, month, year
+    HitPreferences      # Periodo seleccionado por el usuario
+
+CounterHitWidget/       # Extension de WidgetKit
+  CounterHitWidget      # Definicion y provider del timeline
+  CounterHitWidgetView  # Vista del widget
+  HitPeriodIntent       # App Intents para botones configurables
+```
+
+## Requisitos
+
+- iOS 17.0+
+- Xcode 15.0+
+- Swift Charts (incluido en iOS 17)
 
 ## Abrir en Xcode
 
 1. Abre `CounterHit.xcodeproj`.
-2. En el target `CounterHit`, entra a `Signing & Capabilities` y selecciona tu Team.
+2. En el target `CounterHit`, entra a **Signing & Capabilities** y selecciona tu Team.
 3. Repite lo mismo en el target `CounterHitWidget`.
-4. En `CounterHit` y `CounterHitWidget`, confirma el App Group:
-   `group.com.rmkwz.CounterHit`
-5. Si Xcode te pide cambiar bundle id o app group para tu cuenta, usa el mismo valor en:
+4. Confirma que ambos targets tengan el App Group: `group.com.rmkwz.CounterHit`
+5. Si Xcode pide cambiar el bundle ID, actualiza:
    - `CounterHit/CounterHit.entitlements`
    - `CounterHitWidget/CounterHitWidget.entitlements`
    - `CounterHit/Shared/HitStore.swift`
-6. Corre el esquema `CounterHit` en tu iPhone 13 Pro Max.
-
-Si Xcode muestra `requires a development team`, falta seleccionar tu Apple ID/Team en ambos targets. El proyecto usa firma automatica, pero Apple no permite firmar una app para iPhone sin un Team real.
+6. Corre el esquema `CounterHit`.
 
 ## Regenerar el proyecto
 
-El proyecto usa XcodeGen. Si cambias `project.yml`, corre:
+El proyecto usa XcodeGen. Si modificas `project.yml`, regenera con:
 
 ```sh
 xcodegen generate
 ```
 
-## Verificacion usada
+## Tecnologias
 
-Se genero `CounterHit.xcodeproj` con XcodeGen. En este entorno, `xcodebuild` compila Swift y targets hasta la fase de asset catalog, pero falla porque no hay runtimes de simulador disponibles para `actool`:
-
-```text
-No available simulator runtimes for platform iphonesimulator
-```
-
-En Xcode local con runtimes instalados, ese error no deberia aparecer.
-# counter-hit
+- SwiftUI
+- WidgetKit
+- Swift Charts
+- XcodeGen
+- App Intents

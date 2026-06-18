@@ -39,3 +39,12 @@ targets:
         CODE_SIGN_ENTITLEMENTS: CounterHitWidget/CounterHitWidget.entitlements
         SKIP_INSTALL: YES
         ASSETCATALOG_COMPILER_APPICON_NAME: ""
+schemes:
+  CounterHit:
+    build:
+      targets:
+        CounterHit: all
+    run:
+      config: Debug
+    archive:
+      config: Release
