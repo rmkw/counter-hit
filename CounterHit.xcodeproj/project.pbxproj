@@ -14,6 +14,7 @@
 		195C1F83BCBDB2C85CAF22AB /* HitPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447F628EB6CB99996A85EA6 /* HitPeriod.swift */; };
 		2058CF1994D18F411137FEDF /* HitPeriodIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208DC403BB88CF65392F7275 /* HitPeriodIntent.swift */; };
 		263062575C3167775F7145D8 /* HitRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED8E8380DFD7B9FCC70566 /* HitRecord.swift */; };
+		31E5EC51250707B779B3AA91 /* HitDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B53BDE673F2152922BD861 /* HitDefaults.swift */; };
 		3B6C17E5F972E93D737B1D78 /* CounterHitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29710F1E6C53A21A2C6534B0 /* CounterHitApp.swift */; };
 		4702DCF2EDC91BB870E297D7 /* HitBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4AB9C2606D28DD7628233 /* HitBucket.swift */; };
 		53877313E5C05CC352BAD20E /* HitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7DDD2342627C5B3C3A0F3 /* HitStore.swift */; };
@@ -26,6 +27,7 @@
 		BB21CA775DA57FDA157EFFB0 /* HitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B173C5D275D9D6B2AD982 /* HitModel.swift */; };
 		BF75424F59EBD87E9EB7FB8E /* HitPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447F628EB6CB99996A85EA6 /* HitPeriod.swift */; };
 		CD554D3A2DE0F2A56ED9EC3E /* HitCompactChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0BD8E5AC7BCD97FB807D14 /* HitCompactChart.swift */; };
+		D7122AB8993CF59518C3AC3C /* HitDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B53BDE673F2152922BD861 /* HitDefaults.swift */; };
 		E1C8EA2CDEADC178B34A88C2 /* HitRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AED8E8380DFD7B9FCC70566 /* HitRecord.swift */; };
 		F32DB12A64B3A77F6C6C7B16 /* HitBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4AB9C2606D28DD7628233 /* HitBucket.swift */; };
 		F76CA6D458DA6335996F1C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6423FAFBC81B82B15942E2D0 /* Assets.xcassets */; };
@@ -76,6 +78,7 @@
 		AB0BD8E5AC7BCD97FB807D14 /* HitCompactChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitCompactChart.swift; sourceTree = "<group>"; };
 		B5F1D7916A97800D9C83223F /* CounterHitWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHitWidgetView.swift; sourceTree = "<group>"; };
 		C378C33CA909DFDBDD88A582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D7B53BDE673F2152922BD861 /* HitDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitDefaults.swift; sourceTree = "<group>"; };
 		E0B00A178BBBCE87A30C027D /* CounterHitWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterHitWidget.entitlements; sourceTree = "<group>"; };
 		F37AECE2E2EA864EC49155F3 /* CounterHitWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterHitWidget.swift; sourceTree = "<group>"; };
 		FD57F3231654943CC694E06B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			children = (
 				3920DA58237D357D5626FDD6 /* HitAnalytics.swift */,
 				5AD4AB9C2606D28DD7628233 /* HitBucket.swift */,
+				D7B53BDE673F2152922BD861 /* HitDefaults.swift */,
 				8447F628EB6CB99996A85EA6 /* HitPeriod.swift */,
 				84AB92B889C98D0855C404B5 /* HitPreferences.swift */,
 				7AED8E8380DFD7B9FCC70566 /* HitRecord.swift */,
@@ -259,6 +263,7 @@
 				81BFD252B851B3790F814FAA /* HitAnalytics.swift in Sources */,
 				4702DCF2EDC91BB870E297D7 /* HitBucket.swift in Sources */,
 				CD554D3A2DE0F2A56ED9EC3E /* HitCompactChart.swift in Sources */,
+				D7122AB8993CF59518C3AC3C /* HitDefaults.swift in Sources */,
 				BB21CA775DA57FDA157EFFB0 /* HitModel.swift in Sources */,
 				195C1F83BCBDB2C85CAF22AB /* HitPeriod.swift in Sources */,
 				854A24CA08B64598F0693EB4 /* HitPreferences.swift in Sources */,
@@ -276,6 +281,7 @@
 				FA64ABA5D3F6FC968858DCAF /* CounterHitWidgetView.swift in Sources */,
 				06F97110C9912733531E0D02 /* HitAnalytics.swift in Sources */,
 				F32DB12A64B3A77F6C6C7B16 /* HitBucket.swift in Sources */,
+				31E5EC51250707B779B3AA91 /* HitDefaults.swift in Sources */,
 				BF75424F59EBD87E9EB7FB8E /* HitPeriod.swift in Sources */,
 				2058CF1994D18F411137FEDF /* HitPeriodIntent.swift in Sources */,
 				031A03E558FCBCAF06CCBD74 /* HitPreferences.swift in Sources */,

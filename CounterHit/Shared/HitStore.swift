@@ -4,12 +4,14 @@ import WidgetKit
 final class HitStore {
     static let shared = HitStore()
 
-    private let appGroupIdentifier = "group.com.rmkwz.CounterHit"
     private let storageKey = "counter-hit.records"
-    private let fallbackDefaults = UserDefaults.standard
 
     private var defaults: UserDefaults {
-        UserDefaults(suiteName: appGroupIdentifier) ?? fallbackDefaults
+        HitDefaults.shared
+    }
+
+    init() {
+        HitDefaults.migrateStandardValueIfNeeded(forKey: storageKey)
     }
 
     func records() -> [HitRecord] {
